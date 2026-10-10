@@ -4,7 +4,7 @@ A machine learning application built using Python and Streamlit to predict healt
 
 ## 🚀 Live Demo
 
-**[Click here to use the Health Insurance Predictor](https://health-insurance-predictor-mfqydmeeltwe5mw8a8zjby.streamlit.app/))**
+**[Click here to use the Health Insurance Predictor](https://health-insurance-predictor-mfqydmeeltwe5mw8a8zjby.streamlit.app/)**
 
 ## 🛠️ Technologies Used
 - Python

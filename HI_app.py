@@ -26,7 +26,7 @@ smoker=st.text_input("Do you smoke?",key="smoker_text")
 st.radio('',["yes", "no"],key="smoker_radio",on_change=update_smoker)
 
 if st.button('Submit'):
-  if not age or not bmi.strip() or not children:
+  if not age or not bmi.strip() or children==' ':
         st.error("Please fill in all fields before predicting the premium.")
 
   elif gender == 'Select Gender':

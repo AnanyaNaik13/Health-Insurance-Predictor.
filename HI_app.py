@@ -22,7 +22,7 @@ def update_smoker():
     st.session_state.smoker_text = st.session_state.smoker_radio
 if "smoker_text" not in st.session_state:
     st.session_state.smoker_text = "yes"
-smoker=st.text_input("Smoker",key="smoker_text")
+smoker=st.text_input("Do you smoke?",key="smoker_text")
 st.radio('',["yes", "no"],key="smoker_radio",on_change=update_smoker)
 
 if st.button('Submit'):
@@ -35,7 +35,7 @@ if st.button('Submit'):
     yp=round(model.predict(q)[0],2)
     st.markdown(
     f"""
-    <h1 style="font-size: 50px; font-weight: 900; color: white;">
+    <h1 style="font-size: 30px; font-weight: 900; color: white;">
         Your Premium: ₹{yp:,.2f}
     </h1>
     """,

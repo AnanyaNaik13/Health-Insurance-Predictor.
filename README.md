@@ -2,18 +2,18 @@
 
 A machine learning application built using Python and Streamlit to predict health insurance premiums based on user inputs.
 
-## 🚀 Live Demo
+##  Live Demo
 
 **[Click here to use the Health Insurance Predictor](https://health-insurance-predictor-mfqydmeeltwe5mw8a8zjby.streamlit.app/)**
 
-## 🛠️ Technologies Used
+##  Technologies Used
 - Python
 - Streamlit
 - Scikit-learn
 - Pandas
 - NumPy
 
-## 💻 Run Locally
+##  Run Locally
 
 1. Clone this repository:
    `git clone https://github.com/AnanyaNaik13/Health-Insurance-Predictor..git`

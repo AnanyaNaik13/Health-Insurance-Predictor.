@@ -5,8 +5,9 @@ model=pickle.load(open('HI_model.pkl','rb'))
 st.markdown("<h2 style='font-size:22px;'>Health Insurance Predictor</h2>", unsafe_allow_html=True)
 
 
-age=st.text_input('Age:')
-gender=st.selectbox('Gender',['Select Gender','Female','Male',])
+age = st.number_input('Age:',min_value=18,max_value=100,value=18,step=1)
+
+gender=st.selectbox('Gender',['Select Gender','female','male',])
 
 bmi=st.text_input( "BMI", key="bmi_text")
 def update_bmi():
@@ -15,14 +16,14 @@ if "bmi_text" not in st.session_state:
     st.session_state.bmi_text = ""
 st.slider("Select BMI", min_value=10.0,max_value=50.0,value=None,step=0.1,key="bmi_slider",on_change=update_bmi)
 
-children=st.text_input('No. of Children:')
+children = st.number_input('No. of Children:',min_value=0,max_value=10,value=0,step=1)
 
 def update_smoker():
     st.session_state.smoker_text = st.session_state.smoker_radio
 if "smoker_text" not in st.session_state:
-    st.session_state.smoker_text = "Yes"
+    st.session_state.smoker_text = "yes"
 smoker=st.text_input("Smoker",key="smoker_text")
-st.radio("Are you a smoker?",["Yes", "No"],key="smoker_radio",on_change=update_smoker)
+st.radio('',["yes", "no"],key="smoker_radio",on_change=update_smoker)
 
 if st.button('Submit'):
     age=int(age)

@@ -35,7 +35,7 @@ if st.button('Submit'):
     yp=round(model.predict(q)[0],2)
     st.markdown(
     f"""
-    <h1 style="font-size: 30px; font-weight: 900; color: white;">
+    <h1 style="font-size: 22px; font-weight: 900; color: white;">
         Your Premium: ₹{yp:,.2f}
     </h1>
     """,

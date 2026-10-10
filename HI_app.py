@@ -4,7 +4,6 @@ model=pickle.load(open('HI_model.pkl','rb'))
 
 st.markdown("<h2 style='font-size:22px;'>Health Insurance Predictor</h2>", unsafe_allow_html=True)
 
-
 age = st.number_input('Age:',min_value=18,max_value=100,value=18,step=1)
 
 gender=st.selectbox('Gender',['Select Gender','female','male',])
@@ -28,10 +27,8 @@ st.radio('',["yes", "no"],key="smoker_radio",on_change=update_smoker)
 if st.button('Submit'):
   if not age or not bmi.strip() or children==' ':
         st.error("Please fill in all fields before predicting the premium.")
-
   elif gender == 'Select Gender':
         st.error("Please select your gender.")
-
   elif not smoker:
         st.error("Please select smoker status.")
   else:    
@@ -42,14 +39,7 @@ if st.button('Submit'):
     smoker_enc=1 if smoker=='yes' else 0
     q=[[age,gender_enc,bmi,children,smoker_enc]]
     yp=round(model.predict(q)[0],2)
-    st.markdown(
-    f"""
-    <h1 style="font-size: 22px; font-weight: 900; color: white;">
-        Your Premium: ₹{yp:,.2f}
-    </h1>
-    """,
-    unsafe_allow_html=True
-)
+    st.markdown(f"""<h1 style="font-size: 22px; font-weight: 900; color: white;">Your Premium: ₹{yp:,.2f}</h1>""",unsafe_allow_html=True)
     
    
     

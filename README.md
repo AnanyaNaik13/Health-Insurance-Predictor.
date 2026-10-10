@@ -16,7 +16,7 @@ A machine learning application built using Python and Streamlit to predict healt
 ## 💻 Run Locally
 
 1. Clone this repository:
-   `git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git`
+   `git clone https://github.com/AnanyaNaik13/Health-Insurance-Predictor..git`
 
 2. Install dependencies:
    `pip install -r requirements.txt`
